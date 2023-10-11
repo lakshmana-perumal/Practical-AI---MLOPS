@@ -53,4 +53,30 @@ Automated model retraining:
 
 Credit : databricks.com
 
+**DevOps versus MLOps**
+DevOps is a popular practice in developing and operating large-scale software systems. This practice provides benefits such as shortening the development cycles, increasing deployment velocity, and dependable releases. To achieve these benefits, you introduce two concepts in the software system development:
+• Continuous Integration (CI)
+• Continuous Delivery (CD)
+![image](https://github.com/lakshmana-perumal/Practical-AI---MLOPS/assets/101124079/13218c6e-8b1c-44fe-a306-ba0b380b264d)
+
+An ML system is a software system, so similar practices apply to help guarantee that you can reliably build and operate ML systems at scale.
+However, ML systems differ from other software systems in the following ways:
+• Team skills:
+	In an ML project, the team usually includes data scientists or ML researchers, who focus on exploratory data analysis, model development, and experimentation. These members might not be experienced software engineers who can build production-class services.
+• Development:
+	ML is experimental in nature. You should try different features, algorithms, modeling techniques, and parameter configurations to find what works best for the problem as quickly as possible. The challenge is tracking what worked and what didn't, and maintaining 	reproducibility while maximizing code reusability.
+• Testing:
+	Testing an ML system is more involved than testing other software systems. In addition to typical unit and integration tests, you need data validation, trained model quality evaluation, and model validation.
+• Deployment:
+	In ML systems, deployment isn't as simple as deploying an offline-trained ML model as a prediction service. ML systems can require you to deploy a multi-step pipeline to automatically retrain and deploy model. This pipeline adds complexity and requires you to 	automate steps that are manually done before deployment by data scientists to train and validate new models.
+• Production:
+	ML models can have reduced performance not only due to suboptimal coding, but also due to constantly evolving data profiles. In other words, models can decay in more ways than conventional software systems, and you need to consider this degradation. Therefore, 	you need to track summary statistics of your data and monitor the online performance of your model to send notifications or roll back when values deviate from your expectations.
+ 
+ML and other software systems are similar in continuous integration of source control, unit testing, integration testing, and continuous delivery of the software module or the package. However, in ML, there are a few notable differences:
+• CI is no longer only about testing and validating code and components, but also testing and validating data, data schemas, and models.
+• CD is no longer about a single software package or a service, but a system (an ML training pipeline) that should automatically deploy another service (model prediction service).
+• CT is a new property, unique to ML systems, that's concerned with automatically retraining and serving the models.
+
+Credit: Google
+
 
